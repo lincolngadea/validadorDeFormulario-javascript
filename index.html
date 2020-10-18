@@ -7,6 +7,34 @@
     <title>VALIDAÇÃO DE FORMULÁRIOS COM JS</title>
 </head>
 <body>
+    <div class="screen">
+        <div class="leftSide">
+            <img src="images/financial_data.png" alt="">
+        </div>
+        <div class="rightSide">
+            <h1>Novo Cadastro</h1>
+            <form action="cadastro.php" method="post" class="validator">
+                <label>
+                    Seu Nome:<br>
+                    <input type="text" name="name" data-rules="required">
+                </label>
+                <label>
+                    Seu Email:<br>
+                    <input type="email" name="email" >
+                </label>
+                <label>
+                    Sua senha:<br>
+                    <input type="password" name="current-password" >
+                </label>
+                <label>
+                    <input type="submit" value="Cadastrar" >
+                </label>
+            </form>
+            <div>
+                Já possui uma conta? <a href="">Fazer Login</a>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
