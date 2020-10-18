@@ -36,7 +36,18 @@ let validator ={
                         }
                     break;
                     case 'min':
+                        if(input.value.length < rDetails[1]){
+                            return 'Campo tem que ter pelo menos '+rDetails[1]+' caracteres';
+                        }
+                    break;
+                    case 'email':
+                        if(input.value != ''){
+                            let regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i;
 
+                            if(!regex.test(input.value.toLowerCase())){
+                                return 'Informe um email Válido';
+                            }
+                        }                       
                     break;
                 }
             }
@@ -59,7 +70,7 @@ let validator ={
         for(let i = 0;i<inputs.length;i++){
             inputs[i].style ='';
         }
-        
+
         let errorElements = document.querySelectorAll('.error');
         for(let i = 0; i<errorElements.length;i++){
            errorElements[i].remove();
