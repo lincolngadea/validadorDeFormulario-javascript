@@ -35,3 +35,10 @@ body{
     width: 100%;
     outline: 0;
 }
+.error{
+    font-size: 11px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 4px;
+}
